@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 유형01</title>
+        <style>
+              /* fonts */
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+        .nexton { 
+        font-family: 'NexonLv1Gothic';
+        font-weight: 400;
+        }
+
+        
+           /* reset */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+            .blind {
+            
+            width: 0;
+            height: 0;
+            /* 안보이게작업 */
+            overflow: hidden;
+            line-height: 0;
+            /* 절대값 한쪽으로 몰기 */
+            position: absolute;
+            text-indent: -9999px;
+
+            }
+
+            /* 이미지 리플레이스머ㄴ트 */
+            .ir {
+                display: block;
+                overflow: hidden;
+                font-size: 0;
+                line-height: 0;
+                text-indent: -9999px;
+            }
+
+            /* slidertype */
+            .slider_wrap{}
+            .slider {
+                }
+            .slider_inner {}
+            .slider {position: relative;}
+            .slider_img {
+                background-image: url(img/slide01.jpg);
+                width: 100%;
+                /* height: 580px; */
+                /*
+                한번에 사용
+                background-repeat: no-repeat;
+                background-position:center center;
+                background-size: cover;
+                
+                -> background: url(img/slide01.jpg ) no-repeat center center / cover;
+                */
+                background: url(img/slide01.jpg ) no-repeat center center / cover;
+            }    
+            /* 슬라이드안의 글씨 */
+            .slider_img .desc {
+            width: 1160px;
+            margin:0 auto;
+            padding:100px 20px;
+
+            }
+            /* 위에 라운드 사각형 요소만들어줄거임 */
+            .slider_img .desc span {
+                font-size: 16px;
+                background-color: #fff;
+                padding: 1px 20px 0px 20px;
+                /* 위 우 아래 좌 */
+                border-radius:30px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                display: inline-block;
+                /* 마진이 안먹히면 디스플레이 인라인-블럭으로 바꾸어주어야함 */
+            } 
+
+            .slider_img .desc h3{
+                font-size: 110px;
+                font-weight: 300;
+                text-transform: uppercase;
+                color: #fff;
+                margin-bottom: 16px;
+                margin-left: -8px;
+                line-height: 1;
+            }
+            .slider_img .desc p {
+                
+                font-size: 20px;
+                color:#fff;
+                font-weight: 300;
+                line-height: 1.35;
+                margin-bottom: 130px;
+            }
+            .slider_img .desc .btn a {
+                font-size: 16px;
+                background: #fff;
+                padding: 11px 50px;
+                display: inline-block;
+
+            }
+        .slider_img .desc .btn a.black {
+            background: #000;
+            color: #fff;
+        }
+
+
+
+            .slider_arrow {}
+            .slider_arrow a {
+                position: absolute ;
+                /* 기준을 slider 에 넣어준다 position : relative */
+                top: 50%;
+                width: 30px;
+                height: 56px;
+                background-image: url(img/slider_icon.svg);
+                transform: translateY(-50%);
+                /* transform: translateY(-50%);-->중앙에 딱맞게됨 중앙정렬 */
+
+             }
+
+             .slider_arrow a.left {
+                left: 20px;
+             }
+            .slider_arrow a.right {
+                right: 20px;
+                background-position: -50px 0;
+             }
+            .slider_dot {
+            position: absolute;
+            left: 50%; 
+            bottom: 25px;
+            transform: translateX(-50%);
+            
+            }    
+            .slider_dot a {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background-image: url(img/slider_icon.svg);
+        background-position: -20px -70px;
+    }
+    .slider_dot a.active {
+        background-position: 0px -70px;
+    }
+    .slider_dot a.play {
+        background-position: -40px -70px;
+    }
+    .slider_dot a.stop {background-position: -60px -70px;}
+
+        </style>
+
+</head>
+<body>
+    <!-- 섹션(시멘틱 태그) 컨텐츠부분을 나타내는 
+    문서나 어플의 일반적인 섹션요소/헤더(h) 등 포함이되어있음 -->
+    <section id="slidertype" class="slider_wrap nexton">
+        <h2 class="blind">슬라이드 유형</h2>
+        <div class="slider_inner">
+            <!-- 이미지, 화살표 , 슬라이드넘어가는 동그라미-->
+            <div class="slider">
+                <div class="slider_img">
+                    <!-- 이미지 안에 타이포 desc (span/h3/p/div 제목 설명 버튼2개) -->
+                    <div class="desc">
+                        <span>season menu</span>
+                        <h3>season menu</h3>
+                        <p>커피하우스의 새로운음료 제안,<br />
+                            더운여름을 시원하게 이겨내세요!</p>
+                            <div class="btn">
+                                <a href="/">자세히 보기</a>
+                                <a href="/" class="black">사이트 보기</a>
+                            </div>
+                    </div>
+
+                </div>
+                <div class="slider_arrow">
+                    <a href="/" class="left"><span class="ir">이전 이미지</span></a>
+                    <a href="/" class="right"><span class="ir">다음 이미지</span></a>
+
+                </div>
+                <div class="slider_dot">
+                    <a href="/" class="dot active"><span class="ir">1</span></a>
+                    <a href="/" class="dot"><span class="ir">2</span></a>
+                    <a href="/" class="dot"><span class="ir">3</span></a>
+                    <a href="/" class="play"><span class="ir">플레이</span></a>
+                    <a href="/" class="stop"><span class="ir">정지</span></a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
