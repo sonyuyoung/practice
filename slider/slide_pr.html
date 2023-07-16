@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 다시연습</title>
+<style>
+/* fonts */
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+.nexon {
+    font-family: 'NexonLv1Gothic';
+    font-weight: 400;
+}
+
+/* reset */
+ 
+* {
+    margin: 0;
+    padding: 0;
+}
+a { text-decoration: none;
+color : #000;
+ }
+.blind { width: 0; height: 0;overflow: hidden;
+position: absolute;text-indent: -9999px;}
+
+.ir { 
+    overflow: hidden;
+    font-size: 0px;
+    line-height: 0;
+    text-indent: -9999px;
+    display: block;
+}
+/* .ir {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        } */
+
+
+/* slider type  */
+.slider { 
+position: relative;
+
+}
+.slider_img {
+background: url(img/slide01.jpg) no-repeat center center /cover;
+
+
+}
+.slider_img .desc {
+  
+    width: 1160px;
+    height: 580;
+
+    margin: 0 auto;
+    padding: 100px 20px;
+    display: block;
+} 
+.slider_img .desc span {
+    font-size: 16px;
+    background-color: #fff;
+    padding: 1px 14px 0 14px;
+   
+    border-radius: 30px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.slider_img .desc h3 {
+    color :#fff;
+    font-size: 110px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    margin-left: -8px;
+    
+}
+.slider_img .desc p {
+    color:#fff;
+    font-weight: 300;
+    line-height: 1.35;
+    margin-bottom: 130px;
+    font-size: 16px;
+}
+.slider_img .desc .btn a {
+background: #fff;
+padding: 11px 50px;
+font-size: 16px;
+display: inline-block;
+}
+.slider_img .desc .btn a.black {
+background:  #000;
+color : #fff
+
+} 
+
+.slider_arrow a {
+   width: 30px;
+   height: 56px;
+   background: url(img/slider_icon.svg);
+     position: absolute;
+     transform: translateY(-50%);
+     top:50%;
+
+}
+.slider_arrow .left {
+ left: 20px;
+
+}
+.slider_arrow .right {
+ right: 20px;
+ background-position: -50px 0;
+}
+</style>
+</head>
+<body>
+<div id="slidertype" class="slider_wrap nexon">
+    <h2 class="blind">슬라이드 유형</h2>
+    <div class="slinder_inner">
+    <div class="slider">
+        <div class="slider_img">
+            <div class="desc">
+                <span>여름 신메뉴 출시</span>
+                <h3>new frontend</h3>
+                <p>커피하우스의 새로운 신메뉴가 출시 되었습니다 <br/>
+                무더운 여름을 상큼한 음료들과 함께 날려버려요!</p>
+                <div class="btn">
+                    <a href="/">자세히 보기</a>
+                    <a href="/" class="black">사이트 보기</a>
+                </div>
+                </div>
+                </div>
+                <div class="slider_arrow">
+                    <a href="" class="left"><span class="ir">이전 이미지</span></a>
+                    <a href="" class="right"><span class="ir">다음 이미지</span></a>
+                </div>
+    </div>
+
+    </div>
+
+
+</div> 
+</body>
+</html>
