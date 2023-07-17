@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 파트</title>
+  </head>
+  <style>
+    @import url("https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css");
+
+    .nexton {
+      font-family: "NexonLv1Gothic";
+      font-weight: 400;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: normal;
+    }
+
+    .container {
+      width: 1160px;
+      padding: 0 20px;
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 120px 0px;
+    }
+
+    .section > h2 {
+      font-weight: normal;
+      font-size: 50px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .section > p {
+      font-size: 22px;
+
+      font-weight: 300;
+      text-align: center;
+      margin-bottom: 70px;
+    }
+    .image_inner {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .image {
+      width: 49%;
+      height: 370px;
+      box-sizing: border-box;
+      padding: 200px 30px 30px 30px;
+      color: #fff;
+    }
+    .image.img1 {
+      background: url(img/img1.jpg) no-repeat center center;
+    }
+    .image.img2 {
+      background: url(img/img2.jpg) no-repeat center center;
+    }
+    .title {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+    .desc {
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+    .btn {
+      background: #fff;
+      padding: 10px 40px;
+      display: inline-block;
+    }
+
+    .btn.yellow {
+      background: #eda600;
+      color: #fff;
+    }
+  </style>
+  <body>
+    <section id="imagetype" class="image_wrap section nexton">
+      <h2>실습 3번 이미지 역영</h2>
+      <p>이미지 유형입니다. 마우스 오버시 자세한 정보가 나와는 구조입니다.</p>
+      <div class="image_inner container">
+        <article class="image img1">
+          <h2 class="title">레드커런트 티</h2>
+          <p class="desc">
+            새로운 음료 레드 커런트 티 입니다 뚜렷한 색감의 음료로 기분전환을
+            해보세요 레드 커런트 티와 무더운 여름을 시원하게 보내세요
+          </p>
+          <a class="btn" href="">자세히보기</a>
+        </article>
+        <article class="image img2">
+          <h2 class="title">레드커런트 티</h2>
+          <p class="desc">
+            새로운 음료 레드 커런트 티 입니다 뚜렷한 색감의 음료로 기분전환을
+            해보세요 레드 커런트 티와 무더운 여름을 시원하게 보내세요
+          </p>
+          <a class="btn yellow" href="">자세히보기</a>
+        </article>
+      </div>
+    </section>
+  </body>
+</html>
