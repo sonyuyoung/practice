@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=2, initial-scale=1.0" />
+    <title>카드유형</title>
+    <style>
+      /* font */
+      @import url("https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css");
+
+      .nexton {
+        font-family: "NexonLv1Gothic";
+        font-weight: 400;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: normal;
+      }
+      /* reset */
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      img {
+        width: 100%;
+      }
+      /* common */
+
+      .container {
+        width: 1160px;
+        padding: 0 20px;
+        margin: 0 auto;
+      }
+      .section {
+        padding: 120px 0;
+      }
+      .section > h2 {
+        font-size: 50px;
+        line-height: 1;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .section > p {
+        text-align: center;
+        color: #666;
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 1.5;
+        margin-bottom: 70px;
+      }
+      /* cardtype */
+      .card_wrap {
+      }
+      .card_innder {
+        display: flex;
+        justify-content: space-between;
+      }
+      .card {
+        width: 32%;
+
+        background: #f5f5f5;
+      }
+      .card_header {
+      }
+
+      .card_body {
+        padding: 24px;
+      }
+      .card_body .tit {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .card_body .desc {
+        color: #666;
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+        font-weight: 300;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+      .card .btn {
+        font-size: 16px;
+      }
+      .card .btn a {
+      }
+    </style>
+  </head>
+  <body>
+    <section id="cardtype" class="card_wrap nexton section">
+      <h2>빅데이터 실무 강의의 시작</h2>
+      <p>
+        html / css 연습 디자인과 함께 코딩 진행 예정 빠른 습득과<br />
+        재미를 위해 피그마와 함께 연습하기
+      </p>
+      <div class="card_innder container">
+        <article class="card">
+          <figure class="card_header">
+            <img src="img/img1.png" alt="사진1" />
+          </figure>
+          <div class="card_body">
+            <h3 class="tit">웹표준 사이트 만들기</h3>
+            <p class="desc">
+              만들기 위한 기초강의 html css 를 먼저 듣고 코딩까지 해서 예습 +
+              복습 완료하기를 목표로 앞으로를 ..
+            </p>
+            <a class="btn" a href="/">더 자세히보기</a>
+          </div>
+        </article>
+        <article class="card">
+          <figure class="card_header">
+            <img src="img/img2.png" alt="사진1" />
+          </figure>
+          <div class="card_body">
+            <h3 class="tit">웹표준 사이트 만들기</h3>
+            <p class="desc">
+              만들기 위한 기초강의 html css 를 먼저 듣고 코딩까지 해서 예습 +
+              복습 완료하기를 목표로 앞으로를 ..ㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+            </p>
+            <a class="btn" a href="/">더 자세히보기</a>
+          </div>
+        </article>
+        <article class="card">
+          <figure class="card_header">
+            <img src="img/img3.png" alt="사진1" />
+          </figure>
+          <div class="card_body">
+            <h3 class="tit">웹표준 사이트 만들기</h3>
+            <p class="desc">
+              만들기 위한 기초강의 html css 를 먼저 듣고 코딩까지 해서 예습 +
+              복습 완료하기를 목표로 앞으로를 ..ㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+            </p>
+            <a class="btn" a href="/">더 자세히보기</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </body>
+</html>
